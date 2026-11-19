@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class WelcomeController {
-	
-	@RequestMapping(method = RequestMethod.GET, produces = {"application/json"})
-	public @ResponseBody String helloWorld() {
-		return "Hello World"; //"application/json" mean this is a text not a redirect
-	}
+
+        @RequestMapping(value = "/hello", method = RequestMethod.GET, produces = {"application/json"})
+        public @ResponseBody String helloWorld() {
+                return "Hello World";
+        }
 }
